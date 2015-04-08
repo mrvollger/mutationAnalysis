@@ -1,0 +1,58 @@
+---
+title: "Mutations and Crossovers"
+author: "Mitchell Vollger"
+date: "3/31/2015"
+output: pdf_document
+---
+
+
+```{r, include=FALSE}
+#source("/home/mitchell/IW/hmm/mutations.r")
+#source("/home/mitchell/IW/haploids/haploids.r")
+source("/home/mitchell/IW/meme/meme.r")
+library(plyr)
+```
+
+```{r}
+pcount
+pcountcis
+pcountuv
+
+p
+pcis
+puv
+
+pHaploidCountW303
+pHaploidCountS288C
+pHaploidCount
+
+pHaploidW303
+pHaploidS288C
+pHaploid
+
+
+load("/home/mitchell/IW/hmm/plotshmm.data")
+load("/home/mitchell/IW/hmm/hmmcounts.data")
+
+plotshmm
+
+hmmcounts <- data["mode"]
+hmmcounts$type <- lapply(rownames(hmmcounts), function(x){gsub("[0-9]", "",x)  } )
+hmmcounts
+
+```
+
+```{r}
+# meme stuff 
+load("/home/mitchell/IW/meme/pic.data")
+load("/home/mitchell/IW/meme/picrc.data")
+
+for(i in 1:length(pic)){
+  print(pic[i])
+  print(picrc[i])
+}
+```
+
+
+
+
